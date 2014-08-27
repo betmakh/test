@@ -1,0 +1,35 @@
+.mainNav {
+    width: 100%;
+    .clearfix();
+    li {
+        list-style: none;
+    }
+}
+@menu-item-height: 20px;
+.menu-item {
+    float: left;
+    border: 1px solid transparent;
+    position: relative;
+    a {
+        line-height: @menu-item-height;
+        text-decoration: none;
+    }
+}
+.submenu {
+    position: absolute;
+    top: @menu-item-height;
+    display: block;
+    .clearfix();
+    &.left {
+        left: 0;    
+    }
+    &.right {
+        right: 0;
+    }
+    
+}
+.clearfix() {
+  zoom: 1;
+  &:before { content: ''; display: block; }
+  &:after { content: ''; display: table; clear: both; }
+}
